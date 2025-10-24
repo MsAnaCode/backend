@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Tarefa = require('../models/tarefasModel');
-const e = require('express');
+const express = require("express");
 
 async function criar(req, res) {
     try {

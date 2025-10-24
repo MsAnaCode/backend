@@ -28,9 +28,7 @@ describe("Teste do recurso /tarefas", () => {
     const response = await request.post(url).send({ nome: "a" });
 
     expect(response.status).toBe(422);
-    expect(response.body.msg).toBe(
-      "Nome da tarefa deve ter pelo menos 3 caracteres"
-    );
+    expect(response.body.msg).toBe("Nome da tarefa deve ter pelo menos 3 caracteres");
   });
   test("GET /deve retornar 200", async () => {
     const response = await request.get(url);
@@ -89,9 +87,7 @@ describe("Teste do recurso /tarefas", () => {
   test("PUT /id deve retornar 422", async () => {
     const response = await request.put(`${url}/${id}`).send({ nome: "a" });
     expect(response.status).toBe(422);
-    expect(response.body.msg).toBe(
-      "Nome da tarefa deve ter pelo menos 3 caracteres"
-    );
+    expect(response.body.msg).toBe("Nome da tarefa deve ter pelo menos 3 caracteres");
   });
 
   test("DELETE /id deve retornar 204", async () => {
